@@ -49,7 +49,7 @@ def main():
     response = requests.get("https://raw.githubusercontent.com/SamtendoNetwork/ElectrodeUpdater/refs/heads/main/ver", timeout=10)
     response.raise_for_status()
 
-    if response.text.strip() != "0.0.6":
+    if response.text.strip() != "0.0.7":
         print("ElectrodeUpdater is outdated (ironic, right?). Please download the latest version from https://github.com/SamtendoNetwork/ElectrodeUpdater/releases/latest.")
         sys.exit(1)
     # Please don't change this check just to get around the check
@@ -77,8 +77,8 @@ def main():
     print("\nSD card looks good!!")
     print("\nUpdating Electrode files...\n")
     
-    wps = "https://github.com/SamtendoNetwork/Electrode/releases/download/v0.0.6/Electrode-samtendo.wps"
-    wms = "https://github.com/SamtendoNetwork/Electrode/releases/download/v0.0.6/Electrode-samtendo.wms"
+    wps = "https://github.com/SamtendoNetwork/Electrode/releases/download/v0.0.7/Electrode-samtendo.wps"
+    wms = "https://github.com/SamtendoNetwork/Electrode/releases/download/v0.0.7/Electrode-samtendo.wms"
     
     print("Plugins:")
     download_and_replace(plugins_path, "Electrode-samtendo.wps", wps)
